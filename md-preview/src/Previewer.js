@@ -1,14 +1,12 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const Previewer = (props) => {
-    return (
-    <PreviewerBody>
-        <h3>Preview</h3>
-        <div>{props.input}</div>
-    </PreviewerBody>
-    );
-};
+const Previewer = props => (
+  <PreviewerBody>
+    <h3>Preview</h3>
+    <div>{props.result}</div>
+  </PreviewerBody>
+);
 
 export default Previewer;
 

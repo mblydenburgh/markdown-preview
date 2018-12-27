@@ -1,14 +1,12 @@
 import React from 'react';
 import Styled from 'styled-components';
 
-const Editor = () => {
-    return(
-    <EditorBody>
-        <h3>Editor</h3>
-        <textarea id='editor' cols='75' rows='10'/>
-    </EditorBody>
-    );
-};
+const Editor = props => (
+  <EditorBody>
+    <h3>Editor</h3>
+    <textarea onChange={props.onChange} id="editor" cols="75" rows="10" />
+  </EditorBody>
+);
 
 export default Editor;
 
