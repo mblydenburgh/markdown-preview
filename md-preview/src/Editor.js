@@ -11,6 +11,5 @@ const Editor = props => (
 export default Editor;
 
 const EditorBody = Styled.div`
-    border: 1px solid red;
     text-align: center;
 `;

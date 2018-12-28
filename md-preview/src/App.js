@@ -19,7 +19,7 @@ class App extends Component {
       <PreviewBody>
         <Header>Markdown Preview</Header>
         <Editor onChange={handleInput} />
-        <Previewer result={this.state.value} />
+        <Previewer markdown={this.state.value} />
       </PreviewBody>
     );
   }
