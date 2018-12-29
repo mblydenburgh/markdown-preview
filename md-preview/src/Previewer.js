@@ -1,15 +1,15 @@
 import React from 'react';
 import Styled from 'styled-components';
-import { Markdown } from 'react-showdown';
+// import { Markdown } from 'react-showdown';
+// import showdown from 'showdown';
+import marked from 'marked';
 
-const markdown = '# Hello\n\nMore content...';
+marked.setOptions({ breaks: true });
 
 const Previewer = props => (
   <PreviewerBody>
     <h3>Preview</h3>
-    <PreviewDiv id="preview">
-        <Markdown markup={ props.markdown } />
-    </PreviewDiv>
+    <PreviewDiv id="preview" dangerouslySetInnerHTML={{ __html: marked(props.markdown) }} />
   </PreviewerBody>
 );
 
@@ -22,5 +22,5 @@ const PreviewerBody = Styled.div`
 const PreviewDiv = Styled.div`
     background: white;
     margin: 1rem;
+    text-align: left;
 `;
-// <PreviewDiv>{(props.result)?(props.result):('Markdown will preview here')}</PreviewDiv>
